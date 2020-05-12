@@ -4,7 +4,7 @@ import 'package:flutter_swiper/flutter_swiper.dart';
 
 
 class CardSwiper extends StatelessWidget {
-  const CardSwiper({Key key}) : super(key: key);
+  
 
   final List<dynamic> peliculas;
 
@@ -19,8 +19,8 @@ class CardSwiper extends StatelessWidget {
       padding: EdgeInsets.only(top:10.0),
           child: Swiper(
             layout:SwiperLayout.STACK,
-            itemWidth: _screenSize.width * 0.7,//width del 70% de la pantalla
-            itemHeight: _screenSize.height * 0.5,//height 50% de la pantalla
+            itemWidth: _screenSize.width * 0.7,//width del 70% de la pantalla se plica a las tarjetas y no al contenedor
+            itemHeight: _screenSize.height * 0.5,//height 50% de la pantalla  se plica a las tarjetas y no al contenedor
             itemBuilder: (BuildContext context, int index) {
               return ClipRRect(
                 borderRadius: BorderRadius.circular(20.0),
